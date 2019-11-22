@@ -11,8 +11,8 @@ public class MapsAPI: NSObject {
         }
     }
     
-    public func getStaticImage(lon: Double, lat: Double, completion: @escaping(Data?) -> Void, errorCompletion: @escaping(Error?) -> Void) {
-        let endpoint = Constants.staticImagesPrefix.replacingOccurrences(of: "{lat}", with: String(lat)).replacingOccurrences(of: "{lon}", with: String(lon))
+    public func getStaticImage(lon: Double, lat: Double, zoom: Double, completion: @escaping(Data?) -> Void, errorCompletion: @escaping(Error?) -> Void) {
+        let endpoint = Constants.staticImagesPrefix.replacingOccurrences(of: "{lat}", with: String(lat)).replacingOccurrences(of: "{lon}", with: String(lon)).replacingOccurrences(of: "{zoom}", with: String(zoom))
         let urlString = String(format: "%@%@/300x200?access_token=%@", Constants.baseURLString, endpoint, Constants.API_KEY)
         if let url = URL(string: urlString) {
             getImageRequest(url: url, completion: completion, errorCompletion: errorCompletion)

@@ -4,6 +4,9 @@ import MapsWrapper
 class MapsTableViewController: UITableViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var stepper: UIStepper!
+    @IBOutlet weak var button: UIButton!
+    var zoom = 5.0
     var mapsApi = MapsAPI()
     var entities: [MapEntityModel] = []
     
@@ -12,6 +15,7 @@ class MapsTableViewController: UITableViewController {
         self.searchBar.delegate = self
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        setButtonTitle()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -21,8 +25,23 @@ class MapsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mapImageCell") as! MapsImageTableViewCell
         cell.mapImage.image = self.entities[indexPath.row].image
-        cell.textLabel?.text = self.entities[indexPath.row].title
+        cell.titleLabel?.text = self.entities[indexPath.row].title
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200.0
+    }
+    
+    @IBAction func stepperValueChanged(_ sender: Any) {
+        zoom = stepper.value
+        setButtonTitle()
+    }
+    
+    func setButtonTitle() {
+//        button.isEnabled = false
+        
+        button.setTitle(String(self.zoom), for: .normal)
     }
 }
 
@@ -38,7 +57,7 @@ extension MapsTableViewController: UISearchBarDelegate {
                 let lon = center[0]
                 let lat = center[1]
                 let title = feature["matching_place_name"] as? String
-                self.mapsApi.getStaticImage(lon: lon, lat: lat, completion: { (imageData) in
+                self.mapsApi.getStaticImage(lon: lon, lat: lat, zoom: self.zoom, completion: { (imageData) in
                     if let imageData = imageData, let image = UIImage.init(data: imageData) {
                         self.entities.append(MapEntityModel(image: image, title: title))
                         print("image found and set")

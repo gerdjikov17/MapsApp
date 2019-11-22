@@ -3,6 +3,7 @@ import UIKit
 class MapsImageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var mapImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
