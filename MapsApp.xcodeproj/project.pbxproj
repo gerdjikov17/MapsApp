@@ -8,26 +8,70 @@
 
 /* Begin PBXBuildFile section */
 		1BF0C2DE2387D4EF003C9C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0C2DD2387D4EF003C9C61 /* AppDelegate.swift */; };
-		1BF0C2E02387D4EF003C9C61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0C2DF2387D4EF003C9C61 /* SceneDelegate.swift */; };
-		1BF0C2E22387D4EF003C9C61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0C2E12387D4EF003C9C61 /* ViewController.swift */; };
+		1BF0C2E22387D4EF003C9C61 /* MapsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0C2E12387D4EF003C9C61 /* MapsTableViewController.swift */; };
 		1BF0C2E52387D4EF003C9C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF0C2E32387D4EF003C9C61 /* Main.storyboard */; };
 		1BF0C2E72387D4F1003C9C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BF0C2E62387D4F1003C9C61 /* Assets.xcassets */; };
 		1BF0C2EA2387D4F1003C9C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF0C2E82387D4F1003C9C61 /* LaunchScreen.storyboard */; };
+		1BF0C2FA2387D58D003C9C61 /* MapsWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BF0C2F82387D58D003C9C61 /* MapsWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BF0C2FD2387D58D003C9C61 /* MapsWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF0C2F62387D58D003C9C61 /* MapsWrapper.framework */; };
+		1BF0C2FE2387D58D003C9C61 /* MapsWrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF0C2F62387D58D003C9C61 /* MapsWrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1BF0C3042387D70A003C9C61 /* MapsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0C3032387D70A003C9C61 /* MapsAPI.swift */; };
+		1BF0C3062387E52D003C9C61 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0C3052387E52D003C9C61 /* Constants.swift */; };
+		1BF0C3082387F471003C9C61 /* MapsImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0C3072387F471003C9C61 /* MapsImageTableViewCell.swift */; };
+		1BF0C30A238807F1003C9C61 /* MapEntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0C309238807F1003C9C61 /* MapEntityModel.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BF0C2FB2387D58D003C9C61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BF0C2D22387D4EF003C9C61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BF0C2F52387D58D003C9C61;
+			remoteInfo = MapsWrapper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1BF0C3022387D58D003C9C61 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1BF0C2FE2387D58D003C9C61 /* MapsWrapper.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1BF0C2DA2387D4EF003C9C61 /* MapsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF0C2DD2387D4EF003C9C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1BF0C2DF2387D4EF003C9C61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1BF0C2E12387D4EF003C9C61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1BF0C2E12387D4EF003C9C61 /* MapsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsTableViewController.swift; sourceTree = "<group>"; };
 		1BF0C2E42387D4EF003C9C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BF0C2E62387D4F1003C9C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BF0C2E92387D4F1003C9C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BF0C2EB2387D4F1003C9C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BF0C2F62387D58D003C9C61 /* MapsWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MapsWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BF0C2F82387D58D003C9C61 /* MapsWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapsWrapper.h; sourceTree = "<group>"; };
+		1BF0C2F92387D58D003C9C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BF0C3032387D70A003C9C61 /* MapsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsAPI.swift; sourceTree = "<group>"; };
+		1BF0C3052387E52D003C9C61 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1BF0C3072387F471003C9C61 /* MapsImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsImageTableViewCell.swift; sourceTree = "<group>"; };
+		1BF0C309238807F1003C9C61 /* MapEntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapEntityModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1BF0C2D72387D4EF003C9C61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BF0C2FD2387D58D003C9C61 /* MapsWrapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BF0C2F32387D58D003C9C61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				1BF0C2DC2387D4EF003C9C61 /* MapsApp */,
+				1BF0C2F72387D58D003C9C61 /* MapsWrapper */,
 				1BF0C2DB2387D4EF003C9C61 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				1BF0C2DA2387D4EF003C9C61 /* MapsApp.app */,
+				1BF0C2F62387D58D003C9C61 /* MapsWrapper.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,17 +103,40 @@
 			isa = PBXGroup;
 			children = (
 				1BF0C2DD2387D4EF003C9C61 /* AppDelegate.swift */,
-				1BF0C2DF2387D4EF003C9C61 /* SceneDelegate.swift */,
-				1BF0C2E12387D4EF003C9C61 /* ViewController.swift */,
+				1BF0C2E12387D4EF003C9C61 /* MapsTableViewController.swift */,
 				1BF0C2E32387D4EF003C9C61 /* Main.storyboard */,
 				1BF0C2E62387D4F1003C9C61 /* Assets.xcassets */,
 				1BF0C2E82387D4F1003C9C61 /* LaunchScreen.storyboard */,
 				1BF0C2EB2387D4F1003C9C61 /* Info.plist */,
+				1BF0C3072387F471003C9C61 /* MapsImageTableViewCell.swift */,
+				1BF0C309238807F1003C9C61 /* MapEntityModel.swift */,
 			);
 			path = MapsApp;
 			sourceTree = "<group>";
 		};
+		1BF0C2F72387D58D003C9C61 /* MapsWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				1BF0C2F82387D58D003C9C61 /* MapsWrapper.h */,
+				1BF0C2F92387D58D003C9C61 /* Info.plist */,
+				1BF0C3032387D70A003C9C61 /* MapsAPI.swift */,
+				1BF0C3052387E52D003C9C61 /* Constants.swift */,
+			);
+			path = MapsWrapper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1BF0C2F12387D58D003C9C61 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BF0C2FA2387D58D003C9C61 /* MapsWrapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		1BF0C2D92387D4EF003C9C61 /* MapsApp */ = {
@@ -77,15 +146,35 @@
 				1BF0C2D62387D4EF003C9C61 /* Sources */,
 				1BF0C2D72387D4EF003C9C61 /* Frameworks */,
 				1BF0C2D82387D4EF003C9C61 /* Resources */,
+				1BF0C3022387D58D003C9C61 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1BF0C2FC2387D58D003C9C61 /* PBXTargetDependency */,
 			);
 			name = MapsApp;
 			productName = MapsApp;
 			productReference = 1BF0C2DA2387D4EF003C9C61 /* MapsApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1BF0C2F52387D58D003C9C61 /* MapsWrapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BF0C2FF2387D58D003C9C61 /* Build configuration list for PBXNativeTarget "MapsWrapper" */;
+			buildPhases = (
+				1BF0C2F12387D58D003C9C61 /* Headers */,
+				1BF0C2F22387D58D003C9C61 /* Sources */,
+				1BF0C2F32387D58D003C9C61 /* Frameworks */,
+				1BF0C2F42387D58D003C9C61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapsWrapper;
+			productName = MapsWrapper;
+			productReference = 1BF0C2F62387D58D003C9C61 /* MapsWrapper.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,6 +188,10 @@
 				TargetAttributes = {
 					1BF0C2D92387D4EF003C9C61 = {
 						CreatedOnToolsVersion = 11.2.1;
+					};
+					1BF0C2F52387D58D003C9C61 = {
+						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -116,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				1BF0C2D92387D4EF003C9C61 /* MapsApp */,
+				1BF0C2F52387D58D003C9C61 /* MapsWrapper */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +225,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1BF0C2F42387D58D003C9C61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,13 +239,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BF0C2E22387D4EF003C9C61 /* ViewController.swift in Sources */,
+				1BF0C2E22387D4EF003C9C61 /* MapsTableViewController.swift in Sources */,
 				1BF0C2DE2387D4EF003C9C61 /* AppDelegate.swift in Sources */,
-				1BF0C2E02387D4EF003C9C61 /* SceneDelegate.swift in Sources */,
+				1BF0C3082387F471003C9C61 /* MapsImageTableViewCell.swift in Sources */,
+				1BF0C30A238807F1003C9C61 /* MapEntityModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BF0C2F22387D58D003C9C61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BF0C3042387D70A003C9C61 /* MapsAPI.swift in Sources */,
+				1BF0C3062387E52D003C9C61 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BF0C2FC2387D58D003C9C61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1BF0C2F52387D58D003C9C61 /* MapsWrapper */;
+			targetProxy = 1BF0C2FB2387D58D003C9C61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1BF0C2E32387D4EF003C9C61 /* Main.storyboard */ = {
@@ -283,10 +402,12 @@
 		1BF0C2EF2387D4F1003C9C61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XFNQF25BM4;
 				INFOPLIST_FILE = MapsApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,10 +422,12 @@
 		1BF0C2F02387D4F1003C9C61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XFNQF25BM4;
 				INFOPLIST_FILE = MapsApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +436,65 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1BF0C3002387D58D003C9C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XFNQF25BM4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MapsWrapper/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Nikola-Gerdzhikov.MapsWrapper";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1BF0C3012387D58D003C9C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XFNQF25BM4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MapsWrapper/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Nikola-Gerdzhikov.MapsWrapper";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -333,6 +515,15 @@
 			buildConfigurations = (
 				1BF0C2EF2387D4F1003C9C61 /* Debug */,
 				1BF0C2F02387D4F1003C9C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BF0C2FF2387D58D003C9C61 /* Build configuration list for PBXNativeTarget "MapsWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BF0C3002387D58D003C9C61 /* Debug */,
+				1BF0C3012387D58D003C9C61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
