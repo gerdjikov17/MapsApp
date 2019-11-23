@@ -20,6 +20,22 @@ public class MapsAPI: NSObject {
         }
     }
     
+    public func getDistance(coordinates: [(lon: Double, lat: Double)], completion: @escaping([String: Any]?) -> Void, errorCompletion: @escaping(Error?) -> Void) {
+        guard coordinates.count >= 2 else { return }
+        var coordinatesString = ""
+        for coordinate in coordinates {
+            coordinatesString.append(contentsOf: String(coordinate.lon) + "," + String(coordinate.lat))
+            coordinatesString.append(contentsOf: ";")
+        }
+        coordinatesString.remove(at: coordinatesString.index(before: coordinatesString.endIndex))
+        let endpoint = Constants.matrixPrefix.replacingOccurrences(of: "{coordinates}", with: coordinatesString)
+        let urlString = String(format: "%@%@?&access_token=%@", Constants.baseURLString, endpoint, Constants.API_KEY)
+        if let url = URL(string: urlString) {
+            getRequest(url: url, completion: completion, errorCompletion: errorCompletion)
+            print(url)
+        }
+    }
+    
     func getRequest(url: URL, completion: @escaping([String: Any]?) -> Void, errorCompletion: @escaping(Error?) -> Void) {
         urlSession.dataTask(with: url) { (data, response, error) in
             if let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as? [String: Any] {
